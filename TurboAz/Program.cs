@@ -15,10 +15,10 @@ namespace TurboAz
             Admin admin = new Admin();
             User user = new User();
 
-             announcement=
 
+            announcement.Marka = new Marka();
+            announcement.Model= new Model<string>();
 
-            
 
             Console.WriteLine(announcement.Marka.Year = 2008);
             Console.WriteLine(announcement.Marka.Price = 20000);
@@ -33,37 +33,37 @@ namespace TurboAz
 
 
 
-            //try
-            //{
-            //    DateTime date1 = announcement.Date;
-            //    Console.WriteLine("Elanin yerleshdirildiyi tarixi" + " " + date1);
-            //    DateTime date2 = date1.AddDays(30);
-            //    Console.WriteLine("Elanin bitme tarixi" + " " + date2);
-            //    if (DateTime.Now > date2)
-            //    {
-            //        throw new ErrorException("error", Reason.ElaninMuddeti);
-            //    }
+            try
+            {
+                DateTime date1 = announcement.Date;
+                Console.WriteLine("Elanin yerleshdirildiyi tarixi" + " " + date1);
+                DateTime date2 = date1.AddDays(30);
+                Console.WriteLine("Elanin bitme tarixi" + " " + date2);
+                if (DateTime.Now > date2)
+                {
+                    throw new ErrorException("error", Reason.ElaninMuddeti);
+                }
 
 
-            //}
-            //catch (ErrorException e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //    Console.WriteLine(e.StackTrace);
-            //    Console.WriteLine(e.sebeb);
-            //}
+            }
+            catch (ErrorException e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                Console.WriteLine(e.sebeb);
+            }
 
-            //catch (Exception e)
-            //{
+            catch (Exception e)
+            {
 
-            //    Console.Write(e.StackTrace);
-            //    Console.Write(e.Message);
-            //}
+                Console.Write(e.StackTrace);
+                Console.Write(e.Message);
+            }
 
-            //finally
-            //{
-            //    Console.WriteLine("Elan");
-            //}
+            finally
+            {
+                Console.WriteLine("Elan");
+            }
 
 
 
