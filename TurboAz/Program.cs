@@ -15,9 +15,9 @@ namespace TurboAz
             Admin admin = new Admin();
             User user = new User();
 
-            announcement.Model = new Model<string>();
 
-
+            announcement.Marka = new Marka();
+            announcement.Model= new Model<string>();
 
 
             Console.WriteLine(announcement.Marka.Year = 2008);
@@ -43,6 +43,7 @@ namespace TurboAz
                 {
                     throw new ErrorException("error", Reason.ElaninMuddeti);
                 }
+
 
             }
             catch (ErrorException e)
